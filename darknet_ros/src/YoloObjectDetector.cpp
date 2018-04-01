@@ -55,7 +55,7 @@ YoloObjectDetector::~YoloObjectDetector()
 bool YoloObjectDetector::readParameters()
 {
   // Load common parameters.
-  nodeHandle_.param("image_view/enable_opencv", viewImage_, true);
+  nodeHandle_.param("image_view/enable_opencv", viewImage_, false);
   nodeHandle_.param("image_view/wait_key_delay", waitKeyDelay_, 3);
   nodeHandle_.param("image_view/enable_console_output", enableConsoleOutput_, false);
 
@@ -381,7 +381,6 @@ void *YoloObjectDetector::detectInThread()
 
 void *YoloObjectDetector::displayInThread(void *ptr)
 {
-	/*
   show_image_cv(buff_[(buffIndex_ + 1) % 3], "Demo", ipl_);
   int c = cvWaitKey(waitKeyDelay_);
   if (c != -1)
@@ -411,7 +410,6 @@ void *YoloObjectDetector::displayInThread(void *ptr)
     if (demoHier_ <= .0)
       demoHier_ = .0;
   }
-	*/
   return 0;
 }
 
@@ -497,7 +495,6 @@ void YoloObjectDetector::yolo()
   int count = 0;
 
   if (!demoPrefix_ && viewImage_) {
-	  /*
     cvNamedWindow("Demo", CV_WINDOW_NORMAL);
     if (fullScreen_) {
       cvSetWindowProperty("Demo", CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
@@ -505,7 +502,6 @@ void YoloObjectDetector::yolo()
       cvMoveWindow("Demo", 0, 0);
       cvResizeWindow("Demo", 640, 480);
     }
-	  */
   }
 
   demoTime_ = getWallTime();
