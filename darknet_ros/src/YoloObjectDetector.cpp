@@ -102,7 +102,7 @@ void YoloObjectDetector::init()
   strcpy(weights, weightsPath.c_str());
 
   // Path to config file.
-  nodeHandle_.param("yolo_model/config_file/name", configModel, std::string("tiny-yolo-voc.cfg"));
+  nodeHandle_.param("yolo_model/config_file/name", configModel, std::string("yolov3.cfg"));
   nodeHandle_.param("config_path", configPath, std::string("/default"));
   configPath += "/" + configModel;
   cfg = new char[configPath.length() + 1];
