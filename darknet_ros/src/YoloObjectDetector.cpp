@@ -497,6 +497,7 @@ void YoloObjectDetector::yolo()
   int count = 0;
 
   if (!demoPrefix_ && viewImage_) {
+	  /*
     cvNamedWindow("Demo", CV_WINDOW_NORMAL);
     if (fullScreen_) {
       cvSetWindowProperty("Demo", CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
@@ -504,6 +505,7 @@ void YoloObjectDetector::yolo()
       cvMoveWindow("Demo", 0, 0);
       cvResizeWindow("Demo", 640, 480);
     }
+	  */
   }
 
   demoTime_ = getWallTime();
