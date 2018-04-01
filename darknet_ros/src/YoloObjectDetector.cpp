@@ -597,6 +597,8 @@ void *YoloObjectDetector::publishInThread()
           boundingBox.ymin = ymin;
           boundingBox.xmax = xmax;
           boundingBox.ymax = ymax;
+	      printf("\nBounding Boxes: \n %s %f %d %d %d %d \n", boundingBox.Class, boundingBox.probability, xmin, ymin, xmax, ymax);
+		  
           boundingBoxesResults_.boundingBoxes.push_back(boundingBox);
         }
       }
