@@ -32,6 +32,7 @@ In order to install darknet_ros, clone the latest version from this repository i
 
     cd catkin_workspace/src
     git clone --recursive https://github.com/zsll/darknet_ros_yolo3.git
+    mv darknet_ros_yolo3  darknet_ros
     cd ../
 
 To maximize performance, make sure to build in *Release* mode. You can specify the build type by setting
