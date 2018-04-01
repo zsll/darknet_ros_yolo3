@@ -91,7 +91,10 @@ void YoloObjectDetector::init()
 
   // Threshold of object detection.
   float thresh;
-  nodeHandle_.param("yolo_model/threshold/value", thresh, (float) 0.3);
+  nodeHandle_.param("yolo_model/threshold/value", thresh, (float) 0.1);
+  
+
+  printf("Threshold: %s\n", thresh);
 
   // Path to weights file.
   nodeHandle_.param("yolo_model/weight_file/name", weightsModel,
