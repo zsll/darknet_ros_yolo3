@@ -92,9 +92,6 @@ void YoloObjectDetector::init()
   // Threshold of object detection.
   float thresh;
   nodeHandle_.param("yolo_model/threshold/value", thresh, (float) 0.1);
-  
-
-  printf("Threshold: %f\n", thresh);
 
   // Path to weights file.
   nodeHandle_.param("yolo_model/weight_file/name", weightsModel,
@@ -124,6 +121,9 @@ void YoloObjectDetector::init()
     strcpy(detectionNames[i], classLabels_[i].c_str());
 	printf("Get class: %s\n", detectionNames[i]);
   }
+  
+
+  printf("Threshold: %f\n", thresh);
 
   // Load network.
   setupNetwork(cfg, weights, data, thresh, detectionNames, numClasses_,
