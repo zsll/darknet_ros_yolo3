@@ -31,7 +31,7 @@ This software is built on the Robotic Operating System ([ROS]), which needs to b
 In order to install darknet_ros, clone the latest version from this repository into your catkin workspace and compile the package using ROS.
 
     cd catkin_workspace/src
-    git clone --recursive git@github.com:leggedrobotics/darknet_ros.git
+    git clone --recursive https://github.com/zsll/darknet_ros_yolo3.git
     cd ../
 
 To maximize performance, make sure to build in *Release* mode. You can specify the build type by setting
@@ -52,11 +52,11 @@ This means that you need to check the compute capability (version) of your GPU. 
 
 ### Download weights
 
-The yolo-voc.weights and tiny-yolo-voc.weights are downloaded automatically in the CMakeLists.txt file. If you need to download them again, go into the weights folder and download the two pre-trained weights from the VOC data set:
+The yolo-voc.weights and yolov3.weights are downloaded automatically in the CMakeLists.txt file. If you need to download them again, go into the weights folder and download the two pre-trained weights from the VOC data set:
 
     cd catkin_workspace/src/darknet_ros/darknet_ros/yolo_network_config/weights/
     wget http://pjreddie.com/media/files/yolo-voc.weights
-    wget http://pjreddie.com/media/files/tiny-yolo-voc.weights
+    wget http://pjreddie.com/media/files/yolov3.weights
 
 
 To use the COCO detection objects, you can download the following weights:

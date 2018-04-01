@@ -95,7 +95,7 @@ void YoloObjectDetector::init()
 
   // Path to weights file.
   nodeHandle_.param("yolo_model/weight_file/name", weightsModel,
-                    std::string("tiny-yolo-voc.weights"));
+                    std::string("yolov3.weights"));
   nodeHandle_.param("weights_path", weightsPath, std::string("/default"));
   weightsPath += "/" + weightsModel;
   weights = new char[weightsPath.length() + 1];
