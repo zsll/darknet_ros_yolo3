@@ -381,6 +381,7 @@ void *YoloObjectDetector::detectInThread()
 
 void *YoloObjectDetector::displayInThread(void *ptr)
 {
+	/*
   show_image_cv(buff_[(buffIndex_ + 1) % 3], "Demo", ipl_);
   int c = cvWaitKey(waitKeyDelay_);
   if (c != -1)
@@ -410,6 +411,7 @@ void *YoloObjectDetector::displayInThread(void *ptr)
     if (demoHier_ <= .0)
       demoHier_ = .0;
   }
+	*/
   return 0;
 }
 
