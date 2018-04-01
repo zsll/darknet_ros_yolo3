@@ -119,7 +119,7 @@ void YoloObjectDetector::init()
   for (int i = 0; i < numClasses_; i++) {
     detectionNames[i] = new char[classLabels_[i].length() + 1];
     strcpy(detectionNames[i], classLabels_[i].c_str());
-	printf("Get class: %s\n", detectionNames[i])
+	printf("Get class: %s\n", detectionNames[i]);
   }
 
   // Load network.
