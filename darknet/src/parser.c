@@ -29,6 +29,7 @@
 #include "route_layer.h"
 #include "shortcut_layer.h"
 #include "softmax_layer.h"
+#include "upsample_layer.h"
 #include "lstm_layer.h"
 #include "utils.h"
 
