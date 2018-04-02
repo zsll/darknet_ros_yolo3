@@ -489,6 +489,15 @@ layer parse_activation(list *options, size_params params)
     return l;
 }
 
+layer parse_upsample(list *options, size_params params, network *net)
+{
+
+    int stride = option_find_int(options, "stride",2);
+    layer l = make_upsample_layer(params.batch, params.w, params.h, params.c, stride);
+    l.scale = option_find_float_quiet(options, "scale", 1);
+    return l;
+}
+
 route_layer parse_route(list *options, size_params params, network net)
 {
     char *l = option_find(options, "layers");
@@ -701,6 +710,8 @@ network parse_network_cfg(char *filename)
             l = parse_avgpool(options, params);
         }else if(lt == ROUTE){
             l = parse_route(options, params, net);
+        }else if(lt == UPSAMPLE){
+            l = parse_upsample(options, params, net);
         }else if(lt == SHORTCUT){
             l = parse_shortcut(options, params, net);
         }else if(lt == DROPOUT){
