@@ -169,6 +169,8 @@ struct layer{
     int reorg;
     int log;
     int tanh;
+    int *mask;
+    int total;
 
     float alpha;
     float beta;
@@ -495,6 +497,15 @@ typedef struct {
 typedef struct{
     float x, y, w, h;
 } box;
+
+typedef struct detection{
+    box bbox;
+    int classes;
+    float *prob;
+    float *mask;
+    float objectness;
+    int sort_class;
+} detection;
 
 typedef struct matrix{
     int rows, cols;
