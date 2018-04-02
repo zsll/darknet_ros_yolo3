@@ -75,6 +75,7 @@ typedef enum {
     RNN,
     GRU,
     LSTM,
+    YOLO,
     CRNN,
     BATCHNORM,
     NETWORK,

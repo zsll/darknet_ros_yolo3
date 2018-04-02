@@ -29,6 +29,7 @@
 #include "shortcut_layer.h"
 #include "upsample_layer.h"
 #include "parser.h"
+#include "yolo_layer.h"
 #include "data.h"
 
 load_args get_base_args(network net)
@@ -165,6 +166,8 @@ char *get_layer_string(LAYER_TYPE a)
             return "normalization";
         case BATCHNORM:
             return "batchnorm";
+        case YOLO:
+            return "yolo";
         default:
             break;
     }
