@@ -180,6 +180,8 @@ struct layer{
     float class_scale;
     int bias_match;
     int random;
+    float ignore_thresh;
+    float truth_thresh;
     float thresh;
     int classfix;
     int absolute;
