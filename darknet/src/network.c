@@ -355,6 +355,8 @@ int resize_network(network *net, int w, int h)
             resize_route_layer(&l, net);
         }else if(l.type == UPSAMPLE){
             resize_upsample_layer(&l, w, h);
+        }else if(l.type == YOLO){
+            resize_yolo_layer(&l, w, h);
         }else if(l.type == REORG){
             resize_reorg_layer(&l, w, h);
         }else if(l.type == AVGPOOL){

@@ -770,8 +770,6 @@ network parse_network_cfg(char *filename)
             l = parse_reorg(options, params);
         }else if(lt == AVGPOOL){
             l = parse_avgpool(options, params);
-        }else if(l.type == YOLO){
-            resize_yolo_layer(&l, w, h);
         }else if(lt == ROUTE){
             l = parse_route(options, params, net);
         }else if(lt == UPSAMPLE){
