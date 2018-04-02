@@ -118,7 +118,7 @@ if (CUDA_FOUND)
     ${DARKNET_PATH}/src/detection_layer.c         ${DARKNET_PATH}/src/softmax_layer.c
     ${DARKNET_PATH}/src/dropout_layer.c           ${DARKNET_PATH}/src/tree.c
     ${DARKNET_PATH}/src/gemm.c                    ${DARKNET_PATH}/src/utils.c
-    ${DARKNET_PATH}/src/gru_layer.c
+    ${DARKNET_PATH}/src/gru_layer.c               ${DARKNET_PATH}/src/upsample_layer.c
 
     ${DARKNET_PATH}/examples/art.c                ${DARKNET_PATH}/examples/regressor.c
     ${DARKNET_PATH}/examples/captcha.c            ${DARKNET_PATH}/examples/rnn.c
@@ -183,7 +183,7 @@ else()
     ${DARKNET_PATH}/src/detection_layer.c         ${DARKNET_PATH}/src/softmax_layer.c
     ${DARKNET_PATH}/src/dropout_layer.c           ${DARKNET_PATH}/src/tree.c
     ${DARKNET_PATH}/src/gemm.c                    ${DARKNET_PATH}/src/utils.c
-    ${DARKNET_PATH}/src/gru_layer.c
+    ${DARKNET_PATH}/src/gru_layer.c               ${DARKNET_PATH}/src/upsample_layer.c
 
     ${DARKNET_PATH}/examples/art.c                ${DARKNET_PATH}/examples/regressor.c
     ${DARKNET_PATH}/examples/captcha.c            ${DARKNET_PATH}/examples/rnn.c
