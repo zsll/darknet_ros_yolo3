@@ -67,6 +67,7 @@ typedef enum {
     ROUTE,
     COST,
     NORMALIZATION,
+	UPSAMPLE,
     AVGPOOL,
     LOCAL,
     SHORTCUT,
