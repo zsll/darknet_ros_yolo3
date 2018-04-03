@@ -301,6 +301,7 @@ void *YoloObjectDetector::detectInThread()
   float nms = .4;
 
   layer l = net_.layers[net_.n - 1];
+  printf("Net n: %d  Layer type:%s", net_.n, l.type);
   float *X = buffLetter_[(buffIndex_ + 2) % 3].data;
   float *prediction = network_predict(net_, X);
 
