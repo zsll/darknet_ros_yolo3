@@ -56,6 +56,7 @@ void *detect_in_thread(void *ptr)
     float nms = .4;
 
     layer l = net.layers[net.n-1];
+  	printf("Net n: %d  Layer type:%s", net_.n, l.type)
     float *X = buff_letter[(buff_index+2)%3].data;
     float *prediction = network_predict(net, X);
 
